@@ -1,2 +1,2 @@
 FROM yourls:latest
-RUN mkdir /usr/src/yourls/user/plugins/yourls-anonymise && wget -O /usr/src/yourls/user/plugins/yourls-anonymise/plugin.php https://raw.githubusercontent.com/wlabarron/yourls-anonymise/main/plugin.php 
+RUN mkdir /usr/src/yourls/user/plugins/yourls-anonymise && curl -o /usr/src/yourls/user/plugins/yourls-anonymise/plugin.php -fsSL "https://raw.githubusercontent.com/wlabarron/yourls-anonymise/main/plugin.php"
