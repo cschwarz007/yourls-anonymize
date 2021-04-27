@@ -2,13 +2,13 @@ FROM yourls:latest
 
 WORKDIR /usr/src/yourls
 
-ADD https://github.com/wlabarron/yourls-anonymise/main/master.tar.gz                 \
+ADD https://api.github.com/repos/wlabarron/yourls-anonymise/tarball                  \
     /opt/yourls-anonymise.tar.gz
-ADD https://github.com/adigitalife/yourls-allow-aliases/master/master.tar.gz                 \
+ADD https://api.github.com/repos/adigitalife/yourls-allow-aliases/tarball            \
     /opt/yourls-allow-aliases.tar.gz
-ADD https://github.com/claytondaley/yourls-api-delete/master/master.tar.gz                 \
+ADD https://api.github.com/repos/claytondaley/yourls-api-delete/tarball              \
     /opt/yourls-api-delete.tar.gz
-ADD https://github.com/adigitalife/yourls-case-insensitive/master/master.tar.gz                 \
+ADD https://api.github.com/repos/adigitalife/yourls-case-insensitive/tarball         \
     /opt/yourls-case-insensitive.tar.gz    
 
 RUN for i in $(ls /opt/*.tar.gz); do                                          \
