@@ -2,9 +2,6 @@ FROM yourls:latest
 
 WORKDIR /usr/src/yourls
 
-ADD https://github.com/adigitalife/yourls-case-insensitive/tarball/master     \
-    /opt/yourls-case-insensitive.tar.gz    
-
 RUN for i in $(ls /opt/*.tar.gz); do                                          \
       plugin_name="$(basename ${i} '.tar.gz')"                              ; \
       mkdir -p user/plugins/${plugin_name}                                  ; \
