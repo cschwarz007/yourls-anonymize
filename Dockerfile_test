@@ -1,4 +1,8 @@
+FROM yourls:latest
+
 WORKDIR /usr/src/yourls
+
+RUN rm -rf /usr/src/yourls/user/plugins/*
 
 ADD https://github.com/wlabarron/yourls-anonymise/tarball/main                \
     /opt/yourls-anonymise.tar.gz
