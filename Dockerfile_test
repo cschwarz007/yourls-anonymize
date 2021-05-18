@@ -12,5 +12,7 @@ RUN for i in $(ls /opt/*.tar.gz); do                                          \
         --strip-components=1                                                  \
         -C user/plugins/${plugin_name}                                      ; \
     done
+    
+RUN rm /usr/src/yourls/user/plugins/*.md
 
 RUN chown -R www-data:www-data /usr/src/yourls/user/plugins
