@@ -4,8 +4,8 @@ WORKDIR /usr/src/yourls
 
 RUN rm -rf /usr/src/yourls/user/plugins/*
 
-ADD https://github.com/wlabarron/yourls-anonymise/tarball/main                \
-    /opt/yourls-anonymise.tar.gz
+ADD https://github.com/adigitalife/yourls-case-insensitive/tarball/master     \
+    /opt/yourls-case-insensitive.tar.gz   
 
 RUN for i in $(ls /opt/*.tar.gz); do                                          \
       plugin_name="$(basename ${i} '.tar.gz')"                              ; \
