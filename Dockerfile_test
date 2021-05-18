@@ -2,6 +2,8 @@ FROM yourls:latest
 
 WORKDIR /usr/src/yourls
 
+RUN rm -rf /usr/src/yourls/user/plugins/*
+
 ADD https://github.com/adigitalife/yourls-case-insensitive/tarball/master     \
     /opt/yourls-case-insensitive.tar.gz    
 
