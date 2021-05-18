@@ -2,16 +2,6 @@ FROM yourls:latest
 
 WORKDIR /usr/src/yourls
 
-RUN rm -rf /usr/src/yourls/user/plugins/random-bg
-
-RUN rm -rf /usr/src/yourls/user/plugins/random-shorturls
-
-RUN rm -rf /usr/src/yourls/user/plugins/sample-page
-
-RUN rm -rf /usr/src/yourls/user/plugins/sample-plugin
-
-RUN rm -rf /usr/src/yourls/user/plugins/sample-toolbar
-
 ADD https://github.com/adigitalife/yourls-case-insensitive/tarball/master     \
     /opt/yourls-case-insensitive.tar.gz    
 
